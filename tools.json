@@ -8,7 +8,7 @@
     {
       "id": "cobalt",
       "name": "Cobalt",
-      "url": "https://github.com/imputnet/cobalt",
+      "url": "https://cobalt.tools",
       "icon": "📥",
       "description": "免费开源视频下载工具，贴链接直接下载，无广告无弹窗无追踪无付费墙，AGPL-3.0 协议全开源，支持 Docker 自建。",
       "category": "others",
@@ -123,6 +123,66 @@
         { "name": "91porn", "url": "https://91porn.com", "desc": "国产成人社区，原创自拍内容为主，可与 355 互补" },
         { "name": "Rou.video", "url": "https://rou.video", "desc": "国产成人视频平台，内容更新快，播放体验好" },
         { "name": "Twitter/X", "url": "https://x.com", "desc": "社交媒体平台，网红和博主的第一手爆料和内容首发地" }
+      ]
+    },
+    {
+      "id": "tiktokio",
+      "name": "TikTokio",
+      "url": "https://tiktokio.bio",
+      "icon": "🎵",
+      "description": "抖音/TikTok 视频去水印下载工具，粘贴链接即可下载无水印高清视频，支持批量处理。",
+      "category": "others",
+      "tags": ["下载", "去水印", "抖音", "TikTok"],
+      "review": "TikTokio 是目前最简洁的 TikTok/抖音去水印下载工具之一。不需要安装任何软件，打开网页粘贴视频链接就能直接下载无水印版本。支持 TikTok 和抖音双平台，对短视频创作者来说非常实用——搬运素材或者保存自己的作品都方便。下载速度快，视频质量保持原分辨率，不会像某些工具那样偷偷压缩画质。界面干净无广告干扰，是短视频下载场景下的首选。",
+      "related": [
+        { "name": "SnapTik", "url": "https://snaptik.app", "desc": "老牌 TikTok 下载工具，支持高清无水印，全球用户量最大" },
+        { "name": "Cobalt", "url": "https://cobalt.tools", "desc": "通用视频下载工具，也支持 TikTok 等平台，无需安装" },
+        { "name": "GreenVideo", "url": "https://greenvideo.cc", "desc": "国内全平台视频下载，抖音/B站/小红书等均可" }
+      ]
+    },
+    {
+      "id": "savefrom",
+      "name": "SaveFrom.net",
+      "url": "https://en1.savefrom.net/17Bb/",
+      "icon": "📸",
+      "description": "Instagram/Facebook 等社交平台视频下载工具，输入链接即可下载高清视频和图片，支持多种格式。",
+      "category": "others",
+      "tags": ["下载", "Instagram", "Facebook", "社交"],
+      "review": "SaveFrom 是社媒内容下载领域的常青树。支持 Instagram、Facebook、Twitter、Vimeo 等主流社交平台的视频和图片下载，覆盖范围广。浏览器插件安装后可以直接在视频旁边显示下载按钮，体验非常丝滑，不需要离开当前页面复制粘贴链接。Instagram 的 Story 和 Reels 下载是很多竞品不支持的功能，SaveFrom 都能搞定。免费版有少量广告但不影响使用，付费版解锁批量下载和更高画质。",
+      "related": [
+        { "name": "Cobalt", "url": "https://cobalt.tools", "desc": "通用视频下载，支持众多平台，无广告无追踪" },
+        { "name": "SnapInsta", "url": "https://snapinsta.app", "desc": "专注 Instagram 下载，支持 Story/Reels/IGTV 高清提取" },
+        { "name": "OmniGet", "url": "https://github.com/tonhowtf/omniget", "desc": "桌面全平台下载器，社交平台内容一站式保存" }
+      ]
+    },
+    {
+      "id": "greenvideo",
+      "name": "GreenVideo",
+      "url": "https://greenvideo.cc",
+      "icon": "🎬",
+      "description": "国内全平台视频下载工具，支持抖音、B站、小红书、快手、微博等主流平台视频无水印提取。",
+      "category": "others",
+      "tags": ["下载", "去水印", "国内平台", "视频"],
+      "review": "GreenVideo 是国内视频下载场景的「瑞士军刀」。相比海外工具对中国平台的兼容性参差不齐，GreenVideo 专攻国内生态——抖音、B站、小红书、快手、微博、西瓜视频等全覆盖。操作简单到粗暴：复制链接，粘贴，下载。支持高清和 4K 画质（取决于源平台），B站视频支持弹幕一并下载。对做自媒体和内容运营的人来说，GreenVideo 几乎是必需品。免费使用，没有次数限制，唯一的代价是偶尔有限的广告。",
+      "related": [
+        { "name": "TikTokio", "url": "https://tiktokio.bio", "desc": "专注抖音/TikTok 去水印，简洁高效" },
+        { "name": "BBdown", "url": "https://github.com/nilaoda/BBDown", "desc": "命令行 B站下载利器，支持 4K HDR 和杜比音效" },
+        { "name": "OmniGet", "url": "https://github.com/tonhowtf/omniget", "desc": "桌面工具，国内国外平台通吃，下载后本地管理" }
+      ]
+    },
+    {
+      "id": "magiceraser",
+      "name": "MagicEraser",
+      "url": "https://magiceraser.org/remove-watermark",
+      "icon": "🪄",
+      "description": "AI 驱动的视频/图片去水印工具，上传即可智能识别并去除水印、Logo、文字等遮挡物，效果自然。",
+      "category": "others",
+      "tags": ["去水印", "AI", "视频编辑", "图片处理"],
+      "review": "MagicEraser 用 AI 做了一件小而美的事：去水印。传统的去水印方法要么要学 PS 要么效果假，MagicEraser 上传后 AI 自动识别水印位置并智能填充，几秒钟出结果。视频去水印是它最大的亮点——逐帧处理，AI 根据周围像素自动补全被水印遮挡的区域，效果比人工还自然。图片去水印更是立竿见影，Logo、文字、日期标记都能一键移除。免费版有分辨率和时长限制，但对大多数日常需求够了。对于不想学 PS 的用户来说，这是去水印的最佳选择。",
+      "related": [
+        { "name": "Cleanup.pictures", "url": "https://cleanup.pictures", "desc": "轻量级图片去水印，拖拽涂抹即可，适合快速修图" },
+        { "name": "HitPaw", "url": "https://hitpaw.com", "desc": "全能型视频/图片/AI 工具套件，去水印功能专业级" },
+        { "name": "TikTokio", "url": "https://tiktokio.bio", "desc": "抖音/TikTok 原视频无痕下载，从源头避免水印问题" }
       ]
     }
   ]
