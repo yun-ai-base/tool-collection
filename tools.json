@@ -1,9 +1,36 @@
 {
-  "updated": "2026-07-06",
+  "updated": "2026-07-07",
   "categories": [
-    { "id": "download", "name": "下载工具", "icon": "📥", "color": "#f59e0b" },
-    { "id": "ai", "name": "AI 工具", "icon": "🤖", "color": "#6366f1" },
-    { "id": "adult", "name": "成人娱乐", "icon": "🔞", "color": "#ef4444" }
+    {
+      "id": "download",
+      "name": "下载工具",
+      "icon": "📥",
+      "color": "#f59e0b"
+    },
+    {
+      "id": "ai",
+      "name": "AI 工具",
+      "icon": "🤖",
+      "color": "#6366f1"
+    },
+    {
+      "id": "adult",
+      "name": "成人娱乐",
+      "icon": "🔞",
+      "color": "#ef4444"
+    },
+    {
+      "id": "info",
+      "name": "信息获取",
+      "icon": "📡",
+      "color": "#06b6d4"
+    },
+    {
+      "id": "monetize",
+      "name": "变现赚钱",
+      "icon": "💰",
+      "color": "#10b981"
+    }
   ],
   "tools": [
     {
@@ -13,12 +40,28 @@
       "icon": "📥",
       "description": "免费开源视频下载工具，贴链接直接下载，无广告无弹窗无追踪无付费墙，AGPL-3.0 协议全开源，支持 Docker 自建。",
       "category": "download",
-      "tags": ["下载", "开源", "视频"],
+      "tags": [
+        "下载",
+        "开源",
+        "视频"
+      ],
       "review": "Cobalt 是那种让人眼前一亮的工具——它做了一件简单的事，但做得极其干净。不像市面上那些布满假下载按钮和弹窗广告的同类网站，Cobalt 没有广告、不要求注册、不追踪用户行为。代理模式确保文件从平台直传浏览器，服务器不存储不缓存。全开源（AGPL-3.0），一条 Docker 命令就能自建实例。如果你只需要偶尔下载个视频而不想安装任何软件，Cobalt 是目前最优雅的解决方案。",
       "related": [
-        { "name": "OmniGet", "url": "https://github.com/tonhowtf/omniget", "desc": "开源桌面下载神器，支持 1800+ 站点，内置课程播放器和音乐库" },
-        { "name": "yt-dlp", "url": "https://github.com/yt-dlp/yt-dlp", "desc": "命令行视频下载神器，youtube-dl 的活跃分支，支持站点最全面" },
-        { "name": "Hitomi Downloader", "url": "https://github.com/KurtBeswor/Hitomi-Downloader", "desc": "图形化下载工具，支持多线程批量下载各类网站内容" }
+        {
+          "name": "OmniGet",
+          "url": "https://github.com/tonhowtf/omniget",
+          "desc": "开源桌面下载神器，支持 1800+ 站点，内置课程播放器和音乐库"
+        },
+        {
+          "name": "yt-dlp",
+          "url": "https://github.com/yt-dlp/yt-dlp",
+          "desc": "命令行视频下载神器，youtube-dl 的活跃分支，支持站点最全面"
+        },
+        {
+          "name": "Hitomi Downloader",
+          "url": "https://github.com/KurtBeswor/Hitomi-Downloader",
+          "desc": "图形化下载工具，支持多线程批量下载各类网站内容"
+        }
       ]
     },
     {
@@ -28,12 +71,29 @@
       "icon": "🚀",
       "description": "开源跨平台桌面下载神器（Win/macOS/Linux），支持 1800+ 网站一键下载，全局热键 Ctrl+Shift+D 后台下载，内置课程播放器和音乐库。",
       "category": "download",
-      "tags": ["下载", "开源", "跨平台", "桌面"],
+      "tags": [
+        "下载",
+        "开源",
+        "跨平台",
+        "桌面"
+      ],
       "review": "OmniGet 是真正意义上的 All-in-One 下载工具。Tauri+Rust+Svelte 技术栈保证了原生性能和跨平台体验。覆盖范围惊人——YouTube、B站（4K/HDR/杜比/弹幕）、抖音、小红书、Udemy 完整课程、Pixiv 画册，甚至磁力和种子。但最出彩的不是下载能力，而是下载后的本地管理：课程内置播放器配合时间戳笔记、PDF/EPUB 专注阅读器加间隔重复、音乐库配同步歌词和均衡器。它不是一个下载器，而是一个完整的内容消费终端。",
       "related": [
-        { "name": "Cobalt", "url": "https://github.com/imputnet/cobalt", "desc": "轻量级在线视频下载，无需安装，贴链接即下" },
-        { "name": "yt-dlp", "url": "https://github.com/yt-dlp/yt-dlp", "desc": "命令行下载标杆，支持站点最多，脚本化和自动化场景首选" },
-        { "name": "imFile", "url": "https://github.com/imfile-io/imfile-desktop", "desc": "基于 Motrix 的现代化下载管理器，支持 BT/磁力/HTTP 多协议" }
+        {
+          "name": "Cobalt",
+          "url": "https://github.com/imputnet/cobalt",
+          "desc": "轻量级在线视频下载，无需安装，贴链接即下"
+        },
+        {
+          "name": "yt-dlp",
+          "url": "https://github.com/yt-dlp/yt-dlp",
+          "desc": "命令行下载标杆，支持站点最多，脚本化和自动化场景首选"
+        },
+        {
+          "name": "imFile",
+          "url": "https://github.com/imfile-io/imfile-desktop",
+          "desc": "基于 Motrix 的现代化下载管理器，支持 BT/磁力/HTTP 多协议"
+        }
       ]
     },
     {
@@ -43,12 +103,28 @@
       "icon": "🔞",
       "description": "全球最大的成人视频分享平台，海量免费内容，支持多语言和社区互动。",
       "category": "adult",
-      "tags": ["成人", "视频", "海外"],
+      "tags": [
+        "成人",
+        "视频",
+        "海外"
+      ],
       "review": "Pornhub 是全球流量最高的成人娱乐平台之一。作为行业标杆，它在内容审核、用户隐私和安全支付方面投入了大量资源。平台支持多语言界面，社区功能完善，用户可以通过点赞、评论和播放列表来组织和发现内容。2025 年后加强了年龄验证机制和 AI 内容检测，合规性持续提升。Premium 订阅提供高清独占内容和无广告体验，但免费层已经足够大多数用户使用。",
       "related": [
-        { "name": "Xvideos", "url": "https://xvideos.com", "desc": "老牌成人视频站，内容量极大，以素人内容见长" },
-        { "name": "OnlyFans", "url": "https://onlyfans.com", "desc": "创作者订阅平台，成人内容创作者的直接变现渠道" },
-        { "name": "Jable.tv", "url": "https://jable.tv", "desc": "日系成人视频平台，主打日本 AV 内容，亚洲用户友好" }
+        {
+          "name": "Xvideos",
+          "url": "https://xvideos.com",
+          "desc": "老牌成人视频站，内容量极大，以素人内容见长"
+        },
+        {
+          "name": "OnlyFans",
+          "url": "https://onlyfans.com",
+          "desc": "创作者订阅平台，成人内容创作者的直接变现渠道"
+        },
+        {
+          "name": "Jable.tv",
+          "url": "https://jable.tv",
+          "desc": "日系成人视频平台，主打日本 AV 内容，亚洲用户友好"
+        }
       ]
     },
     {
@@ -58,12 +134,28 @@
       "icon": "🔞",
       "description": "全球访问量最大的成人视频网站之一，内容库庞大，覆盖各类题材，无需注册即可浏览。",
       "category": "adult",
-      "tags": ["成人", "视频", "海外"],
+      "tags": [
+        "成人",
+        "视频",
+        "海外"
+      ],
       "review": "Xvideos 以海量内容和极简体验著称。网站结构简单直接，不设复杂推荐算法，用户可以快速找到想要的内容。素人和专业制作并存，内容覆盖面极广。作为历史悠久的成人平台，它的优势在于稳定性和庞大的内容库——几乎任何题材都能在这里找到。界面设计虽然不算现代，但加载速度快，搜索功能实用。对网络环境的兼容性也比很多新平台好。",
       "related": [
-        { "name": "Pornhub", "url": "https://pornhub.com", "desc": "全球最大成人平台，社区功能完善，Premium 有高清独占内容" },
-        { "name": "91porn", "url": "https://91porn.com", "desc": "国产成人视频社区，自拍和素人内容为主，中文用户首选" },
-        { "name": "SpankBang", "url": "https://spankbang.com", "desc": "成人视频聚合站，界面现代化，支持高清播放和下载" }
+        {
+          "name": "Pornhub",
+          "url": "https://pornhub.com",
+          "desc": "全球最大成人平台，社区功能完善，Premium 有高清独占内容"
+        },
+        {
+          "name": "91porn",
+          "url": "https://91porn.com",
+          "desc": "国产成人视频社区，自拍和素人内容为主，中文用户首选"
+        },
+        {
+          "name": "SpankBang",
+          "url": "https://spankbang.com",
+          "desc": "成人视频聚合站，界面现代化，支持高清播放和下载"
+        }
       ]
     },
     {
@@ -73,12 +165,28 @@
       "icon": "🔞",
       "description": "国产知名成人视频社区，自拍原创和素人内容为主，中文用户群体庞大，社区活跃度高。",
       "category": "adult",
-      "tags": ["成人", "国产", "社区"],
+      "tags": [
+        "成人",
+        "国产",
+        "社区"
+      ],
       "review": "91porn 是中文互联网最具影响力的成人社区之一。不同于海外平台的专业制作路线，91 以用户自拍和原创内容为核心，形成了独特的社区文化和内容生态。内容的真实感和亲近感是其核心竞争力——普通人的分享比工业化制作更容易引发共鸣。社区互动活跃，用户之间通过评论和私信建立联系。需要注意的是内容质量参差不齐，且需遵守当地法律法规。建议使用 VPN 保护隐私。",
       "related": [
-        { "name": "Rou.video", "url": "https://rou.video", "desc": "国产成人视频聚合，界面简洁，内容丰富更新快" },
-        { "name": "355.fun", "url": "https://355.fun", "desc": "黑料吃瓜社区，八卦和爆料内容为主，娱乐性强" },
-        { "name": "1024 社区", "url": "https://1024.bt", "desc": "老牌中文成人社区，BT 资源分享和讨论，技术门槛较高" }
+        {
+          "name": "Rou.video",
+          "url": "https://rou.video",
+          "desc": "国产成人视频聚合，界面简洁，内容丰富更新快"
+        },
+        {
+          "name": "355.fun",
+          "url": "https://355.fun",
+          "desc": "黑料吃瓜社区，八卦和爆料内容为主，娱乐性强"
+        },
+        {
+          "name": "1024 社区",
+          "url": "https://1024.bt",
+          "desc": "老牌中文成人社区，BT 资源分享和讨论，技术门槛较高"
+        }
       ]
     },
     {
@@ -88,12 +196,28 @@
       "icon": "🔞",
       "description": "日系成人视频在线平台，主打日本 AV 内容，分类细致，更新及时，支持高清播放。",
       "category": "adult",
-      "tags": ["成人", "日产", "AV"],
+      "tags": [
+        "成人",
+        "日产",
+        "AV"
+      ],
       "review": "Jable.tv 是日系 AV 爱好者的宝藏站点。网站对日本 AV 内容的整理和分类做得非常细致——按女优、系列、标签、发行日期等多维度筛选，找片效率远超其他平台。播放体验流畅，高清片源丰富，更新速度紧跟日本发行节奏。界面设计简洁实用，没有铺天盖地的广告干扰。对于喜欢日本 AV 的用户来说，一个 Jable 基本就够了。唯一的遗憾是部分小众厂商的作品覆盖不完整。",
       "related": [
-        { "name": "MissAV", "url": "https://missav.com", "desc": "日系 AV 在线播放，界面现代，支持多语言，更新速度快" },
-        { "name": "JavDB", "url": "https://javdb.com", "desc": "AV 数据库评分站，按女优和番号检索，用户评分和评论参考价值高" },
-        { "name": "Avgle", "url": "https://avgle.com", "desc": "AV 视频聚合平台，日系欧美内容兼有，支持用户上传" }
+        {
+          "name": "MissAV",
+          "url": "https://missav.com",
+          "desc": "日系 AV 在线播放，界面现代，支持多语言，更新速度快"
+        },
+        {
+          "name": "JavDB",
+          "url": "https://javdb.com",
+          "desc": "AV 数据库评分站，按女优和番号检索，用户评分和评论参考价值高"
+        },
+        {
+          "name": "Avgle",
+          "url": "https://avgle.com",
+          "desc": "AV 视频聚合平台，日系欧美内容兼有，支持用户上传"
+        }
       ]
     },
     {
@@ -103,12 +227,28 @@
       "icon": "🔞",
       "description": "国产成人视频在线平台，内容更新快，分类清晰，界面简洁，支持高清播放。",
       "category": "adult",
-      "tags": ["成人", "国产", "视频"],
+      "tags": [
+        "成人",
+        "国产",
+        "视频"
+      ],
       "review": "Rou.video 是近年来崛起的国产成人视频平台，以简洁的界面和快速的内容更新吸引用户。不像老牌站点那样充斥着广告和弹窗，Rou 的浏览体验相对清爽。内容以国产自拍和亚洲精品为主，分类清晰，播放流畅。作为一个相对年轻的平台，它的内容库虽然不如头部站点庞大，但更新频率高，热门内容跟进及时。对于习惯中文界面且偏好国产内容的用户来说，是个不错的选择。",
       "related": [
-        { "name": "91porn", "url": "https://91porn.com", "desc": "国产成人社区标杆，原创自拍内容为主，社区互动活跃" },
-        { "name": "355.fun", "url": "https://355.fun", "desc": "黑料吃瓜社区，娱乐八卦和爆料内容丰富" },
-        { "name": "Jable.tv", "url": "https://jable.tv", "desc": "日系 AV 平台，分类细致更新及时，日本 AV 爱好者必收" }
+        {
+          "name": "91porn",
+          "url": "https://91porn.com",
+          "desc": "国产成人社区标杆，原创自拍内容为主，社区互动活跃"
+        },
+        {
+          "name": "355.fun",
+          "url": "https://355.fun",
+          "desc": "黑料吃瓜社区，娱乐八卦和爆料内容丰富"
+        },
+        {
+          "name": "Jable.tv",
+          "url": "https://jable.tv",
+          "desc": "日系 AV 平台，分类细致更新及时，日本 AV 爱好者必收"
+        }
       ]
     },
     {
@@ -118,12 +258,29 @@
       "icon": "🔞",
       "description": "黑料吃瓜社区，汇集各类娱乐八卦、网红爆料和热点话题，内容娱乐性强，更新频繁。",
       "category": "adult",
-      "tags": ["成人", "吃瓜", "八卦", "社区"],
+      "tags": [
+        "成人",
+        "吃瓜",
+        "八卦",
+        "社区"
+      ],
       "review": "355.fun 定位是「黑料吃瓜」社区，介于成人内容和娱乐八卦之间。它的内容以网红爆料、娱乐圈黑料、社会热点为主，带有强烈的吃瓜文化和猎奇属性。相比纯成人网站，355 的娱乐性和社交属性更强——很多用户是冲着「吃瓜」去的，而不仅仅是成人内容。社区的讨论氛围活跃，评论区常常比正文更精彩。但内容真伪需要自行辨别，建议带着娱乐心态浏览，不必当真。",
       "related": [
-        { "name": "91porn", "url": "https://91porn.com", "desc": "国产成人社区，原创自拍内容为主，可与 355 互补" },
-        { "name": "Rou.video", "url": "https://rou.video", "desc": "国产成人视频平台，内容更新快，播放体验好" },
-        { "name": "Twitter/X", "url": "https://x.com", "desc": "社交媒体平台，网红和博主的第一手爆料和内容首发地" }
+        {
+          "name": "91porn",
+          "url": "https://91porn.com",
+          "desc": "国产成人社区，原创自拍内容为主，可与 355 互补"
+        },
+        {
+          "name": "Rou.video",
+          "url": "https://rou.video",
+          "desc": "国产成人视频平台，内容更新快，播放体验好"
+        },
+        {
+          "name": "Twitter/X",
+          "url": "https://x.com",
+          "desc": "社交媒体平台，网红和博主的第一手爆料和内容首发地"
+        }
       ]
     },
     {
@@ -133,12 +290,29 @@
       "icon": "🎵",
       "description": "抖音/TikTok 视频去水印下载工具，粘贴链接即可下载无水印高清视频，支持批量处理。",
       "category": "download",
-      "tags": ["下载", "去水印", "抖音", "TikTok"],
+      "tags": [
+        "下载",
+        "去水印",
+        "抖音",
+        "TikTok"
+      ],
       "review": "TikTokio 是目前最简洁的 TikTok/抖音去水印下载工具之一。不需要安装任何软件，打开网页粘贴视频链接就能直接下载无水印版本。支持 TikTok 和抖音双平台，对短视频创作者来说非常实用——搬运素材或者保存自己的作品都方便。下载速度快，视频质量保持原分辨率，不会像某些工具那样偷偷压缩画质。界面干净无广告干扰，是短视频下载场景下的首选。",
       "related": [
-        { "name": "SnapTik", "url": "https://snaptik.app", "desc": "老牌 TikTok 下载工具，支持高清无水印，全球用户量最大" },
-        { "name": "Cobalt", "url": "https://cobalt.tools", "desc": "通用视频下载工具，也支持 TikTok 等平台，无需安装" },
-        { "name": "GreenVideo", "url": "https://greenvideo.cc", "desc": "国内全平台视频下载，抖音/B站/小红书等均可" }
+        {
+          "name": "SnapTik",
+          "url": "https://snaptik.app",
+          "desc": "老牌 TikTok 下载工具，支持高清无水印，全球用户量最大"
+        },
+        {
+          "name": "Cobalt",
+          "url": "https://cobalt.tools",
+          "desc": "通用视频下载工具，也支持 TikTok 等平台，无需安装"
+        },
+        {
+          "name": "GreenVideo",
+          "url": "https://greenvideo.cc",
+          "desc": "国内全平台视频下载，抖音/B站/小红书等均可"
+        }
       ]
     },
     {
@@ -148,12 +322,29 @@
       "icon": "📸",
       "description": "Instagram/Facebook 等社交平台视频下载工具，输入链接即可下载高清视频和图片，支持多种格式。",
       "category": "download",
-      "tags": ["下载", "Instagram", "Facebook", "社交"],
+      "tags": [
+        "下载",
+        "Instagram",
+        "Facebook",
+        "社交"
+      ],
       "review": "SaveFrom 是社媒内容下载领域的常青树。支持 Instagram、Facebook、Twitter、Vimeo 等主流社交平台的视频和图片下载，覆盖范围广。浏览器插件安装后可以直接在视频旁边显示下载按钮，体验非常丝滑，不需要离开当前页面复制粘贴链接。Instagram 的 Story 和 Reels 下载是很多竞品不支持的功能，SaveFrom 都能搞定。免费版有少量广告但不影响使用，付费版解锁批量下载和更高画质。",
       "related": [
-        { "name": "Cobalt", "url": "https://cobalt.tools", "desc": "通用视频下载，支持众多平台，无广告无追踪" },
-        { "name": "SnapInsta", "url": "https://snapinsta.app", "desc": "专注 Instagram 下载，支持 Story/Reels/IGTV 高清提取" },
-        { "name": "OmniGet", "url": "https://github.com/tonhowtf/omniget", "desc": "桌面全平台下载器，社交平台内容一站式保存" }
+        {
+          "name": "Cobalt",
+          "url": "https://cobalt.tools",
+          "desc": "通用视频下载，支持众多平台，无广告无追踪"
+        },
+        {
+          "name": "SnapInsta",
+          "url": "https://snapinsta.app",
+          "desc": "专注 Instagram 下载，支持 Story/Reels/IGTV 高清提取"
+        },
+        {
+          "name": "OmniGet",
+          "url": "https://github.com/tonhowtf/omniget",
+          "desc": "桌面全平台下载器，社交平台内容一站式保存"
+        }
       ]
     },
     {
@@ -163,12 +354,29 @@
       "icon": "🎬",
       "description": "国内全平台视频下载工具，支持抖音、B站、小红书、快手、微博等主流平台视频无水印提取。",
       "category": "download",
-      "tags": ["下载", "去水印", "国内平台", "视频"],
+      "tags": [
+        "下载",
+        "去水印",
+        "国内平台",
+        "视频"
+      ],
       "review": "GreenVideo 是国内视频下载场景的「瑞士军刀」。相比海外工具对中国平台的兼容性参差不齐，GreenVideo 专攻国内生态——抖音、B站、小红书、快手、微博、西瓜视频等全覆盖。操作简单到粗暴：复制链接，粘贴，下载。支持高清和 4K 画质（取决于源平台），B站视频支持弹幕一并下载。对做自媒体和内容运营的人来说，GreenVideo 几乎是必需品。免费使用，没有次数限制，唯一的代价是偶尔有限的广告。",
       "related": [
-        { "name": "TikTokio", "url": "https://tiktokio.bio", "desc": "专注抖音/TikTok 去水印，简洁高效" },
-        { "name": "BBdown", "url": "https://github.com/nilaoda/BBDown", "desc": "命令行 B站下载利器，支持 4K HDR 和杜比音效" },
-        { "name": "OmniGet", "url": "https://github.com/tonhowtf/omniget", "desc": "桌面工具，国内国外平台通吃，下载后本地管理" }
+        {
+          "name": "TikTokio",
+          "url": "https://tiktokio.bio",
+          "desc": "专注抖音/TikTok 去水印，简洁高效"
+        },
+        {
+          "name": "BBdown",
+          "url": "https://github.com/nilaoda/BBDown",
+          "desc": "命令行 B站下载利器，支持 4K HDR 和杜比音效"
+        },
+        {
+          "name": "OmniGet",
+          "url": "https://github.com/tonhowtf/omniget",
+          "desc": "桌面工具，国内国外平台通吃，下载后本地管理"
+        }
       ]
     },
     {
@@ -178,12 +386,124 @@
       "icon": "🪄",
       "description": "AI 驱动的视频/图片去水印工具，上传即可智能识别并去除水印、Logo、文字等遮挡物，效果自然。",
       "category": "ai",
-      "tags": ["去水印", "AI", "视频编辑", "图片处理"],
+      "tags": [
+        "去水印",
+        "AI",
+        "视频编辑",
+        "图片处理"
+      ],
       "review": "MagicEraser 用 AI 做了一件小而美的事：去水印。传统的去水印方法要么要学 PS 要么效果假，MagicEraser 上传后 AI 自动识别水印位置并智能填充，几秒钟出结果。视频去水印是它最大的亮点——逐帧处理，AI 根据周围像素自动补全被水印遮挡的区域，效果比人工还自然。图片去水印更是立竿见影，Logo、文字、日期标记都能一键移除。免费版有分辨率和时长限制，但对大多数日常需求够了。对于不想学 PS 的用户来说，这是去水印的最佳选择。",
       "related": [
-        { "name": "Cleanup.pictures", "url": "https://cleanup.pictures", "desc": "轻量级图片去水印，拖拽涂抹即可，适合快速修图" },
-        { "name": "HitPaw", "url": "https://hitpaw.com", "desc": "全能型视频/图片/AI 工具套件，去水印功能专业级" },
-        { "name": "TikTokio", "url": "https://tiktokio.bio", "desc": "抖音/TikTok 原视频无痕下载，从源头避免水印问题" }
+        {
+          "name": "Cleanup.pictures",
+          "url": "https://cleanup.pictures",
+          "desc": "轻量级图片去水印，拖拽涂抹即可，适合快速修图"
+        },
+        {
+          "name": "HitPaw",
+          "url": "https://hitpaw.com",
+          "desc": "全能型视频/图片/AI 工具套件，去水印功能专业级"
+        },
+        {
+          "name": "TikTokio",
+          "url": "https://tiktokio.bio",
+          "desc": "抖音/TikTok 原视频无痕下载，从源头避免水印问题"
+        }
+      ]
+    },
+    {
+      "id": "trendbolt",
+      "name": "TrendBolt",
+      "url": "http://trendbolt.net",
+      "icon": "📡",
+      "description": "全网热点聚合工具，把 X、Reddit、YouTube、GitHub、Product Hunt 等平台的热点聚合到一起，用分数判断热度。",
+      "category": "info",
+      "tags": [
+        "热点聚合",
+        "信息获取",
+        "多平台"
+      ],
+      "review": "TrendBolt 解决了信息获取的核心痛点：多个平台来回切换的低效。它将 X、Reddit、YouTube、GitHub、Product Hunt、HN 等主流信源聚合到一个页面，用统一的分数体系量化热度，扫一眼就知道今天全网在聊什么。与同类工具相比，优势在于信源覆盖面广（6+平台）、界面简洁无干扰。不足在于缺少个性化定制、不支持中文内容优先排序。适合作为每日信息早餐的入口。",
+      "related": [
+        {
+          "name": "Hacker News",
+          "url": "https://news.ycombinator.com",
+          "desc": "技术圈最值得看的热门讨论"
+        },
+        {
+          "name": "Product Hunt",
+          "url": "https://www.producthunt.com",
+          "desc": "每日新品发现平台"
+        },
+        {
+          "name": "GitHub Trending",
+          "url": "https://github.com/trending",
+          "desc": "GitHub 每日开源项目趋势"
+        }
+      ]
+    },
+    {
+      "id": "creatortrend",
+      "name": "CreatorTrend",
+      "url": "http://creatortrend.app",
+      "icon": "📈",
+      "description": "AI 分析多平台内容增长趋势，预测未来 24～48 小时最值得做的话题，帮创作者提前抓住热点窗口。",
+      "category": "info",
+      "tags": [
+        "内容选题",
+        "AI分析",
+        "趋势预测",
+        "创作者"
+      ],
+      "review": "CreatorTrend 的定位精准——不是告诉你现在什么火，而是预测未来什么会火。24～48 小时的提前量意味着创作者可以赶在竞争白热化之前完成选题、制作和发布，抢占流量红利。AI 分析多平台交叉数据的方式比单平台趋势工具更有参考价值。建议将其作为选题灵感来源之一，结合自身领域和受众偏好做判断。适合短视频创作者、自媒体运营、营销人员。",
+      "related": [
+        {
+          "name": "Google Trends",
+          "url": "https://trends.google.com",
+          "desc": "Google 搜索趋势数据"
+        },
+        {
+          "name": "Exploding Topics",
+          "url": "https://explodingtopics.com",
+          "desc": "预判即将爆发的趋势话题"
+        },
+        {
+          "name": "TrendBolt",
+          "url": "http://trendbolt.net",
+          "desc": "多平台热点聚合工具"
+        }
+      ]
+    },
+    {
+      "id": "gemlist",
+      "name": "Gemlist",
+      "url": "http://gemlist.io",
+      "icon": "💰",
+      "description": "专门整理各平台的 Creator Program、联盟计划和创作者激励，帮创作者快速找到正在发钱的平台和变现机会。",
+      "category": "monetize",
+      "tags": [
+        "创作者变现",
+        "联盟营销",
+        "激励计划",
+        "赚钱"
+      ],
+      "review": "Gemlist 切入了一个很实际的需求——创作者经济爆发后，各平台都有自己的 Creator Program 和激励计划，但信息分散更新频繁，普通人很难追踪。Gemlist 把这些机会聚合到一个地方，省去大量搜索和筛选时间。对于正在寻找副业变现渠道、想通过内容创作获得收入的人来说很有价值。建议定期查看新增计划，重点关注与自己内容类型匹配的平台激励政策。",
+      "related": [
+        {
+          "name": "Creator Program 合集",
+          "url": "#",
+          "desc": "各平台创作者计划汇总"
+        },
+        {
+          "name": "联盟营销入门指南",
+          "url": "#",
+          "desc": "联盟营销基础教程"
+        },
+        {
+          "name": "TrendBolt",
+          "url": "http://trendbolt.net",
+          "desc": "全网热点聚合，找选题灵感"
+        }
       ]
     }
   ]
