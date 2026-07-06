@@ -1,0 +1,254 @@
+{
+  "updated": "2026-07-06",
+  "categories": [
+    { "id": "ai", "name": "AI 工具", "icon": "🤖", "color": "#6366f1" },
+    { "id": "dev", "name": "开发工具", "icon": "⚙️", "color": "#f59e0b" },
+    { "id": "design", "name": "设计创意", "icon": "🎨", "color": "#ec4899" },
+    { "id": "productivity", "name": "效率办公", "icon": "🚀", "color": "#10b981" },
+    { "id": "learning", "name": "学习资源", "icon": "📚", "color": "#3b82f6" },
+    { "id": "adult", "name": "成人娱乐", "icon": "🔞", "color": "#ef4444" },
+    { "id": "others", "name": "其他工具", "icon": "📌", "color": "#8b5cf6" }
+  ],
+  "tools": [
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "url": "https://claude.ai",
+      "icon": "🧠",
+      "description": "Anthropic 出品的 AI 编程终端工具，命令行原生交互，能理解大型代码库并自主执行多步骤工程任务。",
+      "category": "ai",
+      "tags": ["编程", "CLI", "Agent"],
+      "review": "Claude Code 是目前综合体验最好的 AI 编程终端工具。它在终端中以对话方式辅助开发，不像传统 IDE 插件那样侵入式。核心优势在于对大型项目结构的理解能力——能自主探索代码库、定位问题根因、并执行复杂的多文件重构。配合 Claude Opus 模型后，在架构设计和跨文件变更方面的表现尤为突出。相比 Copilot 的补全式辅助，Claude Code 更像一个真正的工程搭档。",
+      "related": [
+        { "name": "GitHub Copilot", "url": "https://github.com/features/copilot", "desc": "GitHub 出品，深度集成 VS Code / JetBrains，补全体验流畅" },
+        { "name": "Cursor", "url": "https://cursor.sh", "desc": "AI-first 代码编辑器，内置 Chat 和 Composer，适合全栈开发" },
+        { "name": "Windsurf", "url": "https://codeium.com/windsurf", "desc": "Codeium 出品的 AI IDE，Flow 模式支持自动化的多步骤开发" }
+      ]
+    },
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "url": "https://chatgpt.com",
+      "icon": "💬",
+      "description": "OpenAI 的旗舰 AI 对话产品，支持 GPT-4o 系列模型，具备多模态理解、代码解释和联网搜索能力。",
+      "category": "ai",
+      "tags": ["对话", "多模态", "通用"],
+      "review": "ChatGPT 仍然是通用 AI 对话的标杆产品。GPT-4o 的多模态能力让图片理解和生成变得自然流畅，Canvas 模式适合长文写作和代码协作。2025 年后的更新节奏明显加快，功能覆盖越来越全面。相比垂直领域的 AI 工具，ChatGPT 的优势在于通用性和生态整合——一个入口解决大多数日常 AI 需求。缺点是高级功能需要 Plus 订阅，免费额度有限。",
+      "related": [
+        { "name": "Claude", "url": "https://claude.ai", "desc": "Anthropic 的对话产品，长文本理解和安全性表现突出" },
+        { "name": "Google Gemini", "url": "https://gemini.google.com", "desc": "Google 的多模态 AI，与 Google 生态深度集成" },
+        { "name": "DeepSeek", "url": "https://chat.deepseek.com", "desc": "国产开源模型，1M 超长上下文，性价比极高" }
+      ]
+    },
+    {
+      "id": "vercel",
+      "name": "Vercel",
+      "url": "https://vercel.com",
+      "icon": "⚡",
+      "description": "前端部署与边缘计算平台，支持 Next.js 等 35+ 框架一键部署，全球 CDN 加速，自动预览部署。",
+      "category": "dev",
+      "tags": ["部署", "边缘计算", "CI/CD"],
+      "review": "Vercel 重新定义了前端部署体验。Git 推送后自动构建部署，每个分支生成独立预览链接，配合 Serverless Functions 和 Edge Functions 覆盖了大部分前端应用的后端需求。对于个人开发者和中小团队来说，免去了服务器运维的烦恼。免费额度慷慨，足以支撑个人项目和原型验证。唯一需要注意的是冷启动延迟，高频访问的场景建议配合传统服务器使用。",
+      "related": [
+        { "name": "Netlify", "url": "https://netlify.com", "desc": "老牌前端部署平台，DevOps 功能完善，表单处理和函数支持成熟" },
+        { "name": "Cloudflare Pages", "url": "https://pages.cloudflare.com", "desc": "基于 Cloudflare 全球网络，带宽免费不限量，边缘能力强大" },
+        { "name": "Railway", "url": "https://railway.app", "desc": "全栈部署平台，支持数据库和定时任务，适合后端服务部署" }
+      ]
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "url": "https://github.com",
+      "icon": "🐙",
+      "description": "全球最大的代码托管与协作平台，提供版本控制、Actions CI/CD、Codespaces 云开发环境、Projects 项目管理。",
+      "category": "dev",
+      "tags": ["版本控制", "协作", "开源"],
+      "review": "GitHub 早已不只是代码托管平台，而是完整的开发协作生态。Actions 提供了强大的 CI/CD 能力，Codespaces 让任何设备都能秒级启动开发环境，Copilot 深度嵌入整个工作流。对于开源社区而言，GitHub 的网络效应无可替代——几乎所有的 AI 项目、框架和工具都在这里首发和维护。2025 年后 GitHub Models 和 Copilot Chat 的加入，让平台本身也成为了 AI 开发的核心阵地。",
+      "related": [
+        { "name": "GitLab", "url": "https://gitlab.com", "desc": "自托管友好的 DevOps 平台，CI/CD 功能强大，适合企业内部部署" },
+        { "name": "Gitee", "url": "https://gitee.com", "desc": "国产代码托管平台，国内访问速度快，中文社区活跃" },
+        { "name": "SourceHut", "url": "https://sourcehut.org", "desc": "极简主义的代码托管，无 JavaScript，纯邮件驱动的协作方式" }
+      ]
+    },
+    {
+      "id": "figma",
+      "name": "Figma",
+      "url": "https://figma.com",
+      "icon": "🎨",
+      "description": "基于浏览器的协作式 UI/UX 设计工具，支持实时多人编辑、组件系统、原型交互和开发者交接。",
+      "category": "design",
+      "tags": ["UI设计", "原型", "协作"],
+      "review": "Figma 是 UI 设计领域的游戏规则改变者。基于 Web 的架构天然支持协作，不再需要手动同步设计文件。组件系统和变体功能让设计系统维护变得高效，Auto Layout 接近 CSS Flexbox 的思维模式，让设计与开发的语言更加统一。Dev Mode 为开发者提供了精确的尺寸和样式信息，大幅减少了设计到代码的沟通成本。2025 年 AI 功能的加入让重复性设计任务可以自动化完成。",
+      "related": [
+        { "name": "Sketch", "url": "https://sketch.com", "desc": "macOS 原生设计工具，轻量高效，矢量编辑能力出色" },
+        { "name": "Penpot", "url": "https://penpot.app", "desc": "开源设计协作工具，支持 SVG 原生格式，可自托管" },
+        { "name": "Canva", "url": "https://canva.com", "desc": "面向非设计师的平面设计平台，模板丰富，上手简单" }
+      ]
+    },
+    {
+      "id": "notion",
+      "name": "Notion",
+      "url": "https://notion.so",
+      "icon": "📋",
+      "description": "全能型笔记与知识管理工具，集文档、数据库、看板、日历于一体，支持团队协作和 AI 辅助写作。",
+      "category": "productivity",
+      "tags": ["笔记", "知识管理", "协作"],
+      "review": "Notion 是「All-in-one」工作流的代表产品。它将文档、数据库、看板、日历等多种视图融合在同一页面中，让个人知识管理和团队项目管理使用同一套工具。数据库的关联和聚合能力让信息组织变得极其灵活——可以把阅读笔记、项目任务和日程安排串联起来。Notion AI 的写作辅助和自动摘要功能实用但不花哨。缺点是离线体验一般，大量数据时加载速度会下降。",
+      "related": [
+        { "name": "Obsidian", "url": "https://obsidian.md", "desc": "基于本地 Markdown 的知识库，双向链接和图谱视图是核心特色" },
+        { "name": "Craft", "url": "https://craft.do", "desc": "原生应用体验的文档工具，设计精美，离线性能出色" },
+        { "name": "飞书文档", "url": "https://www.feishu.cn/product/docs", "desc": "飞书内置文档工具，支持多维表格和 AI 助手，国内协作首选" }
+      ]
+    },
+    {
+      "id": "mdn",
+      "name": "MDN Web Docs",
+      "url": "https://developer.mozilla.org",
+      "icon": "📖",
+      "description": "Mozilla 维护的 Web 技术权威文档，涵盖 HTML/CSS/JS 参考、API 文档和开发指南，前端开发者必备。",
+      "category": "learning",
+      "tags": ["前端", "文档", "教程"],
+      "review": "MDN 是 Web 开发者的「圣经」级参考。CSS 属性的兼容性表格、JavaScript API 的浏览器支持矩阵、以及丰富的交互式示例，让 MDN 在技术文档领域独树一帜。相比 W3Schools，MDN 的内容更严谨、更新更及时。2025 年 AI 助手的加入让文档检索变得更智能——可以直接用自然语言描述想实现的效果，MDN 会推荐相关的 API 和代码示例。所有内容开源，社区贡献保证了知识的准确性和时效性。",
+      "related": [
+        { "name": "W3Schools", "url": "https://w3schools.com", "desc": "入门友好的 Web 教程站，在线代码编辑器和练习题丰富" },
+        { "name": "CSS-Tricks", "url": "https://css-tricks.com", "desc": "CSS 技巧和最佳实践，文章质量高，适合进阶学习" },
+        { "name": "web.dev", "url": "https://web.dev", "desc": "Google 的 Web 性能和学习平台，Core Web Vitals 优化指南" }
+      ]
+    },
+    {
+      "id": "siliconflow",
+      "name": "硅基流动",
+      "url": "https://siliconflow.cn",
+      "icon": "🔮",
+      "description": "国内 AI 模型 API 聚合平台，提供 DeepSeek、Qwen 等主流开源模型的推理服务，按量计费，接入简单。",
+      "category": "others",
+      "tags": ["AI API", "国产", "模型聚合"],
+      "review": "硅基流动解决了国内开发者接入 AI 模型的两大痛点：网络延迟和付费门槛。聚合了 DeepSeek、通义千问、GLM 等主流国产开源模型，API 接口兼容 OpenAI 格式，迁移成本极低。推理速度快，价格相比国际平台有明显优势。对于想在国内搭建 AI 应用的开发者来说，是目前最便捷的模型接入渠道之一。缺点是模型版本更新有时滞后于官方，部分小众模型覆盖不全。",
+      "related": [
+        { "name": "DeepSeek 开放平台", "url": "https://platform.deepseek.com", "desc": "DeepSeek 官方 API 平台，提供最新版本模型的直接访问" },
+        { "name": "OpenRouter", "url": "https://openrouter.ai", "desc": "全球 AI 模型聚合路由，支持 200+ 模型，按使用量统一计费" },
+        { "name": "Groq", "url": "https://groq.com", "desc": "基于 LPU 的高速推理平台，免费额度慷慨，推理速度极快" }
+      ]
+    },
+    {
+      "id": "cobalt",
+      "name": "Cobalt",
+      "url": "https://github.com/imputnet/cobalt",
+      "icon": "📥",
+      "description": "免费开源视频下载工具，贴链接直接下载，无广告无弹窗无追踪无付费墙，AGPL-3.0 协议全开源，支持 Docker 自建。",
+      "category": "others",
+      "tags": ["下载", "开源", "视频"],
+      "review": "Cobalt 是那种让人眼前一亮的工具——它做了一件简单的事，但做得极其干净。不像市面上那些布满假下载按钮和弹窗广告的同类网站，Cobalt 没有广告、不要求注册、不追踪用户行为。代理模式确保文件从平台直传浏览器，服务器不存储不缓存。全开源（AGPL-3.0），一条 Docker 命令就能自建实例。如果你只需要偶尔下载个视频而不想安装任何软件，Cobalt 是目前最优雅的解决方案。",
+      "related": [
+        { "name": "OmniGet", "url": "https://github.com/tonhowtf/omniget", "desc": "开源桌面下载神器，支持 1800+ 站点，内置课程播放器和音乐库" },
+        { "name": "yt-dlp", "url": "https://github.com/yt-dlp/yt-dlp", "desc": "命令行视频下载神器，youtube-dl 的活跃分支，支持站点最全面" },
+        { "name": "Hitomi Downloader", "url": "https://github.com/KurtBeswor/Hitomi-Downloader", "desc": "图形化下载工具，支持多线程批量下载各类网站内容" }
+      ]
+    },
+    {
+      "id": "omniget",
+      "name": "OmniGet",
+      "url": "https://github.com/tonhowtf/omniget",
+      "icon": "🚀",
+      "description": "开源跨平台桌面下载神器（Win/macOS/Linux），支持 1800+ 网站一键下载，全局热键 Ctrl+Shift+D 后台下载，内置课程播放器和音乐库。",
+      "category": "others",
+      "tags": ["下载", "开源", "跨平台", "桌面"],
+      "review": "OmniGet 是真正意义上的 All-in-One 下载工具。Tauri+Rust+Svelte 技术栈保证了原生性能和跨平台体验。覆盖范围惊人——YouTube、B站（4K/HDR/杜比/弹幕）、抖音、小红书、Udemy 完整课程、Pixiv 画册，甚至磁力和种子。但最出彩的不是下载能力，而是下载后的本地管理：课程内置播放器配合时间戳笔记、PDF/EPUB 专注阅读器加间隔重复、音乐库配同步歌词和均衡器。它不是一个下载器，而是一个完整的内容消费终端。",
+      "related": [
+        { "name": "Cobalt", "url": "https://github.com/imputnet/cobalt", "desc": "轻量级在线视频下载，无需安装，贴链接即下" },
+        { "name": "yt-dlp", "url": "https://github.com/yt-dlp/yt-dlp", "desc": "命令行下载标杆，支持站点最多，脚本化和自动化场景首选" },
+        { "name": "imFile", "url": "https://github.com/imfile-io/imfile-desktop", "desc": "基于 Motrix 的现代化下载管理器，支持 BT/磁力/HTTP 多协议" }
+      ]
+    },
+    {
+      "id": "pornhub",
+      "name": "Pornhub",
+      "url": "https://pornhub.com",
+      "icon": "🔞",
+      "description": "全球最大的成人视频分享平台，海量免费内容，支持多语言和社区互动。",
+      "category": "adult",
+      "tags": ["成人", "视频", "海外"],
+      "review": "Pornhub 是全球流量最高的成人娱乐平台之一。作为行业标杆，它在内容审核、用户隐私和安全支付方面投入了大量资源。平台支持多语言界面，社区功能完善，用户可以通过点赞、评论和播放列表来组织和发现内容。2025 年后加强了年龄验证机制和 AI 内容检测，合规性持续提升。Premium 订阅提供高清独占内容和无广告体验，但免费层已经足够大多数用户使用。",
+      "related": [
+        { "name": "Xvideos", "url": "https://xvideos.com", "desc": "老牌成人视频站，内容量极大，以素人内容见长" },
+        { "name": "OnlyFans", "url": "https://onlyfans.com", "desc": "创作者订阅平台，成人内容创作者的直接变现渠道" },
+        { "name": "Jable.tv", "url": "https://jable.tv", "desc": "日系成人视频平台，主打日本 AV 内容，亚洲用户友好" }
+      ]
+    },
+    {
+      "id": "xvideos",
+      "name": "Xvideos",
+      "url": "https://xvideos.com",
+      "icon": "🔞",
+      "description": "全球访问量最大的成人视频网站之一，内容库庞大，覆盖各类题材，无需注册即可浏览。",
+      "category": "adult",
+      "tags": ["成人", "视频", "海外"],
+      "review": "Xvideos 以海量内容和极简体验著称。网站结构简单直接，不设复杂推荐算法，用户可以快速找到想要的内容。素人和专业制作并存，内容覆盖面极广。作为历史悠久的成人平台，它的优势在于稳定性和庞大的内容库——几乎任何题材都能在这里找到。界面设计虽然不算现代，但加载速度快，搜索功能实用。对网络环境的兼容性也比很多新平台好。",
+      "related": [
+        { "name": "Pornhub", "url": "https://pornhub.com", "desc": "全球最大成人平台，社区功能完善，Premium 有高清独占内容" },
+        { "name": "91porn", "url": "https://91porn.com", "desc": "国产成人视频社区，自拍和素人内容为主，中文用户首选" },
+        { "name": "SpankBang", "url": "https://spankbang.com", "desc": "成人视频聚合站，界面现代化，支持高清播放和下载" }
+      ]
+    },
+    {
+      "id": "91porn",
+      "name": "91porn",
+      "url": "https://91porn.com",
+      "icon": "🔞",
+      "description": "国产知名成人视频社区，自拍原创和素人内容为主，中文用户群体庞大，社区活跃度高。",
+      "category": "adult",
+      "tags": ["成人", "国产", "社区"],
+      "review": "91porn 是中文互联网最具影响力的成人社区之一。不同于海外平台的专业制作路线，91 以用户自拍和原创内容为核心，形成了独特的社区文化和内容生态。内容的真实感和亲近感是其核心竞争力——普通人的分享比工业化制作更容易引发共鸣。社区互动活跃，用户之间通过评论和私信建立联系。需要注意的是内容质量参差不齐，且需遵守当地法律法规。建议使用 VPN 保护隐私。",
+      "related": [
+        { "name": "Rou.video", "url": "https://rou.video", "desc": "国产成人视频聚合，界面简洁，内容丰富更新快" },
+        { "name": "355.fun", "url": "https://355.fun", "desc": "黑料吃瓜社区，八卦和爆料内容为主，娱乐性强" },
+        { "name": "1024 社区", "url": "https://1024.bt", "desc": "老牌中文成人社区，BT 资源分享和讨论，技术门槛较高" }
+      ]
+    },
+    {
+      "id": "jable-tv",
+      "name": "Jable.tv",
+      "url": "https://jable.tv",
+      "icon": "🔞",
+      "description": "日系成人视频在线平台，主打日本 AV 内容，分类细致，更新及时，支持高清播放。",
+      "category": "adult",
+      "tags": ["成人", "日产", "AV"],
+      "review": "Jable.tv 是日系 AV 爱好者的宝藏站点。网站对日本 AV 内容的整理和分类做得非常细致——按女优、系列、标签、发行日期等多维度筛选，找片效率远超其他平台。播放体验流畅，高清片源丰富，更新速度紧跟日本发行节奏。界面设计简洁实用，没有铺天盖地的广告干扰。对于喜欢日本 AV 的用户来说，一个 Jable 基本就够了。唯一的遗憾是部分小众厂商的作品覆盖不完整。",
+      "related": [
+        { "name": "MissAV", "url": "https://missav.com", "desc": "日系 AV 在线播放，界面现代，支持多语言，更新速度快" },
+        { "name": "JavDB", "url": "https://javdb.com", "desc": "AV 数据库评分站，按女优和番号检索，用户评分和评论参考价值高" },
+        { "name": "Avgle", "url": "https://avgle.com", "desc": "AV 视频聚合平台，日系欧美内容兼有，支持用户上传" }
+      ]
+    },
+    {
+      "id": "rou-video",
+      "name": "Rou.video",
+      "url": "https://rou.video",
+      "icon": "🔞",
+      "description": "国产成人视频在线平台，内容更新快，分类清晰，界面简洁，支持高清播放。",
+      "category": "adult",
+      "tags": ["成人", "国产", "视频"],
+      "review": "Rou.video 是近年来崛起的国产成人视频平台，以简洁的界面和快速的内容更新吸引用户。不像老牌站点那样充斥着广告和弹窗，Rou 的浏览体验相对清爽。内容以国产自拍和亚洲精品为主，分类清晰，播放流畅。作为一个相对年轻的平台，它的内容库虽然不如头部站点庞大，但更新频率高，热门内容跟进及时。对于习惯中文界面且偏好国产内容的用户来说，是个不错的选择。",
+      "related": [
+        { "name": "91porn", "url": "https://91porn.com", "desc": "国产成人社区标杆，原创自拍内容为主，社区互动活跃" },
+        { "name": "355.fun", "url": "https://355.fun", "desc": "黑料吃瓜社区，娱乐八卦和爆料内容丰富" },
+        { "name": "Jable.tv", "url": "https://jable.tv", "desc": "日系 AV 平台，分类细致更新及时，日本 AV 爱好者必收" }
+      ]
+    },
+    {
+      "id": "355-fun",
+      "name": "355.fun",
+      "url": "https://355.fun",
+      "icon": "🔞",
+      "description": "黑料吃瓜社区，汇集各类娱乐八卦、网红爆料和热点话题，内容娱乐性强，更新频繁。",
+      "category": "adult",
+      "tags": ["成人", "吃瓜", "八卦", "社区"],
+      "review": "355.fun 定位是「黑料吃瓜」社区，介于成人内容和娱乐八卦之间。它的内容以网红爆料、娱乐圈黑料、社会热点为主，带有强烈的吃瓜文化和猎奇属性。相比纯成人网站，355 的娱乐性和社交属性更强——很多用户是冲着「吃瓜」去的，而不仅仅是成人内容。社区的讨论氛围活跃，评论区常常比正文更精彩。但内容真伪需要自行辨别，建议带着娱乐心态浏览，不必当真。",
+      "related": [
+        { "name": "91porn", "url": "https://91porn.com", "desc": "国产成人社区，原创自拍内容为主，可与 355 互补" },
+        { "name": "Rou.video", "url": "https://rou.video", "desc": "国产成人视频平台，内容更新快，播放体验好" },
+        { "name": "Twitter/X", "url": "https://x.com", "desc": "社交媒体平台，网红和博主的第一手爆料和内容首发地" }
+      ]
+    }
+  ]
+}
