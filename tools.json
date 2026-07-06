@@ -1,8 +1,9 @@
 {
   "updated": "2026-07-06",
   "categories": [
-    { "id": "adult", "name": "成人娱乐", "icon": "🔞", "color": "#ef4444" },
-    { "id": "others", "name": "其他工具", "icon": "📌", "color": "#8b5cf6" }
+    { "id": "download", "name": "下载工具", "icon": "📥", "color": "#f59e0b" },
+    { "id": "ai", "name": "AI 工具", "icon": "🤖", "color": "#6366f1" },
+    { "id": "adult", "name": "成人娱乐", "icon": "🔞", "color": "#ef4444" }
   ],
   "tools": [
     {
@@ -11,7 +12,7 @@
       "url": "https://cobalt.tools",
       "icon": "📥",
       "description": "免费开源视频下载工具，贴链接直接下载，无广告无弹窗无追踪无付费墙，AGPL-3.0 协议全开源，支持 Docker 自建。",
-      "category": "others",
+      "category": "download",
       "tags": ["下载", "开源", "视频"],
       "review": "Cobalt 是那种让人眼前一亮的工具——它做了一件简单的事，但做得极其干净。不像市面上那些布满假下载按钮和弹窗广告的同类网站，Cobalt 没有广告、不要求注册、不追踪用户行为。代理模式确保文件从平台直传浏览器，服务器不存储不缓存。全开源（AGPL-3.0），一条 Docker 命令就能自建实例。如果你只需要偶尔下载个视频而不想安装任何软件，Cobalt 是目前最优雅的解决方案。",
       "related": [
@@ -26,7 +27,7 @@
       "url": "https://github.com/tonhowtf/omniget",
       "icon": "🚀",
       "description": "开源跨平台桌面下载神器（Win/macOS/Linux），支持 1800+ 网站一键下载，全局热键 Ctrl+Shift+D 后台下载，内置课程播放器和音乐库。",
-      "category": "others",
+      "category": "download",
       "tags": ["下载", "开源", "跨平台", "桌面"],
       "review": "OmniGet 是真正意义上的 All-in-One 下载工具。Tauri+Rust+Svelte 技术栈保证了原生性能和跨平台体验。覆盖范围惊人——YouTube、B站（4K/HDR/杜比/弹幕）、抖音、小红书、Udemy 完整课程、Pixiv 画册，甚至磁力和种子。但最出彩的不是下载能力，而是下载后的本地管理：课程内置播放器配合时间戳笔记、PDF/EPUB 专注阅读器加间隔重复、音乐库配同步歌词和均衡器。它不是一个下载器，而是一个完整的内容消费终端。",
       "related": [
@@ -131,7 +132,7 @@
       "url": "https://tiktokio.bio",
       "icon": "🎵",
       "description": "抖音/TikTok 视频去水印下载工具，粘贴链接即可下载无水印高清视频，支持批量处理。",
-      "category": "others",
+      "category": "download",
       "tags": ["下载", "去水印", "抖音", "TikTok"],
       "review": "TikTokio 是目前最简洁的 TikTok/抖音去水印下载工具之一。不需要安装任何软件，打开网页粘贴视频链接就能直接下载无水印版本。支持 TikTok 和抖音双平台，对短视频创作者来说非常实用——搬运素材或者保存自己的作品都方便。下载速度快，视频质量保持原分辨率，不会像某些工具那样偷偷压缩画质。界面干净无广告干扰，是短视频下载场景下的首选。",
       "related": [
@@ -146,7 +147,7 @@
       "url": "https://en1.savefrom.net/17Bb/",
       "icon": "📸",
       "description": "Instagram/Facebook 等社交平台视频下载工具，输入链接即可下载高清视频和图片，支持多种格式。",
-      "category": "others",
+      "category": "download",
       "tags": ["下载", "Instagram", "Facebook", "社交"],
       "review": "SaveFrom 是社媒内容下载领域的常青树。支持 Instagram、Facebook、Twitter、Vimeo 等主流社交平台的视频和图片下载，覆盖范围广。浏览器插件安装后可以直接在视频旁边显示下载按钮，体验非常丝滑，不需要离开当前页面复制粘贴链接。Instagram 的 Story 和 Reels 下载是很多竞品不支持的功能，SaveFrom 都能搞定。免费版有少量广告但不影响使用，付费版解锁批量下载和更高画质。",
       "related": [
@@ -161,7 +162,7 @@
       "url": "https://greenvideo.cc",
       "icon": "🎬",
       "description": "国内全平台视频下载工具，支持抖音、B站、小红书、快手、微博等主流平台视频无水印提取。",
-      "category": "others",
+      "category": "download",
       "tags": ["下载", "去水印", "国内平台", "视频"],
       "review": "GreenVideo 是国内视频下载场景的「瑞士军刀」。相比海外工具对中国平台的兼容性参差不齐，GreenVideo 专攻国内生态——抖音、B站、小红书、快手、微博、西瓜视频等全覆盖。操作简单到粗暴：复制链接，粘贴，下载。支持高清和 4K 画质（取决于源平台），B站视频支持弹幕一并下载。对做自媒体和内容运营的人来说，GreenVideo 几乎是必需品。免费使用，没有次数限制，唯一的代价是偶尔有限的广告。",
       "related": [
@@ -176,7 +177,7 @@
       "url": "https://magiceraser.org/remove-watermark",
       "icon": "🪄",
       "description": "AI 驱动的视频/图片去水印工具，上传即可智能识别并去除水印、Logo、文字等遮挡物，效果自然。",
-      "category": "others",
+      "category": "ai",
       "tags": ["去水印", "AI", "视频编辑", "图片处理"],
       "review": "MagicEraser 用 AI 做了一件小而美的事：去水印。传统的去水印方法要么要学 PS 要么效果假，MagicEraser 上传后 AI 自动识别水印位置并智能填充，几秒钟出结果。视频去水印是它最大的亮点——逐帧处理，AI 根据周围像素自动补全被水印遮挡的区域，效果比人工还自然。图片去水印更是立竿见影，Logo、文字、日期标记都能一键移除。免费版有分辨率和时长限制，但对大多数日常需求够了。对于不想学 PS 的用户来说，这是去水印的最佳选择。",
       "related": [
