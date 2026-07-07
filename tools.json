@@ -26,6 +26,12 @@
       "color": "#06b6d4"
     },
     {
+      "id": "network",
+      "name": "网络工具",
+      "icon": "🌐",
+      "color": "#22c55e"
+    },
+    {
       "id": "monetize",
       "name": "变现赚钱",
       "icon": "💰",
@@ -503,6 +509,39 @@
           "name": "TrendBolt",
           "url": "http://trendbolt.net",
           "desc": "全网热点聚合，找选题灵感"
+        }
+      ]
+    }
+    {
+      "id": "fanqiang",
+      "name": "翻墙教程合集",
+      "url": "https://github.com/bannedbook/fanqiang",
+      "icon": "🔓",
+      "description": "全网最全翻墙教程仓库，更新近十年，40K+ Star。覆盖 Windows/macOS/Linux/Android/iOS 全平台，内含翻墙软件下载、苹果美区账号注册、VPS 搭建、软路由配置等全套教程。",
+      "category": "network",
+      "tags": [
+        "翻墙",
+        "VPN",
+        "科学上网",
+        "教程",
+        "GitHub"
+      ],
+      "review": "bannedbook/fanqiang 是 GitHub 上最老牌、最全面的翻墙教程仓库之一，更新近十年，40K+ Star 印证了其持续价值。与多数昙花一现的同类项目不同，这个库的优势在于系统性和持续维护：从 Windows 到 iOS 的全平台覆盖、从机场选购到自建 VPS 的分级内容、从苹果美区账号到软路由的进阶教程，基本能解决一个普通用户从零开始到「自由上网」的所有需求。内容以实用为导向，步骤详尽，适合动手能力强的用户。需要注意的是翻墙工具变动快，部分链接可能随项目更新而失效，建议关注仓库的 Release 和 Issue 区获取最新动态。",
+      "related": [
+        {
+          "name": "clash-verge-rev",
+          "url": "https://github.com/clash-verge-rev/clash-verge-rev",
+          "desc": "Clash 内核图形化客户端，目前最主流的翻墙客户端之一"
+        },
+        {
+          "name": "v2ray-core",
+          "url": "https://github.com/v2fly/v2ray-core",
+          "desc": "V2Ray 核心代理工具，翻墙技术栈中的基础设施级项目"
+        },
+        {
+          "name": "Xray-core",
+          "url": "https://github.com/XTLS/Xray-core",
+          "desc": "V2Ray 的改进分支，性能更好协议更丰富"
         }
       ]
     }
