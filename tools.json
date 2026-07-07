@@ -26,6 +26,12 @@
       "color": "#06b6d4"
     },
     {
+      "id": "network",
+      "name": "网络工具",
+      "icon": "🌐",
+      "color": "#22c55e"
+    },
+    {
       "id": "monetize",
       "name": "变现赚钱",
       "icon": "💰",
@@ -504,6 +510,21 @@
           "url": "http://trendbolt.net",
           "desc": "全网热点聚合，找选题灵感"
         }
+      ]
+    },
+    {
+      "id": "fanqiang",
+      "name": "翻墙教程合集",
+      "url": "https://github.com/bannedbook/fanqiang",
+      "icon": "🔓",
+      "description": "GitHub 48K+ Star 翻墙教程合集，更新近十年，覆盖全平台翻墙软件下载、苹果美区账号注册、VPS搭建、软路由配置全套教程。",
+      "category": "network",
+      "tags": ["翻墙", "VPN", "科学上网", "教程", "GitHub"],
+      "review": "卧槽！兄弟们~挖到个翻墙神器教程！\n\n很多人只会用机场。但有时想自己搞一个，却没有教程~今天它来了！！！\n\n兄弟们，阿台在GitHub上发现个猛货，名字直白到爆，fanqiang ~🤣   内容丰富到离谱！\n\n1️⃣ 翻墙软件下载教程\n2️⃣ 苹果美区账号注册指南  \n3️⃣ 手把手教你搭VPS、搞软路由\n全给你写得明明白白\n\n更新快十年\n4W多颗星\nWindows/macOS/Linux/Android/iOS全平台教程一步到位\n\nGitHub：https://github.com/bannedbook/fanqiang\n\n想自己研究的兄弟，可以自行研究下！",
+      "related": [
+        {"name": "clash-verge-rev", "url": "https://github.com/clash-verge-rev/clash-verge-rev", "desc": "Clash 内核图形化客户端"},
+        {"name": "v2ray-core", "url": "https://github.com/v2fly/v2ray-core", "desc": "V2Ray 核心代理工具"},
+        {"name": "Xray-core", "url": "https://github.com/XTLS/Xray-core", "desc": "V2Ray 改进分支"}
       ]
     }
   ]
