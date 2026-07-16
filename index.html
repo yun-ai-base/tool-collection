@@ -438,6 +438,47 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* 页码条 */
+.pager {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.page-btn {
+  min-width: 36px;
+  height: 36px;
+  padding: 0 10px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  background: white;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.page-btn:hover:not(:disabled):not(.active) {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+.page-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+  cursor: default;
+}
+.page-btn:disabled { opacity: .4; cursor: default; }
+.page-ellipsis {
+  color: var(--text-placeholder);
+  padding: 0 2px;
+  user-select: none;
+}
+
 /* Responsive */
 @media (max-width: 640px) {
   .header { padding: 36px 20px 20px; }
@@ -478,10 +519,9 @@ body {
   </div>
   <div class="list-footer" id="listFooter" style="display:none;">
     <button class="load-more-btn" id="loadMoreBtn">加载更多 ↓</button>
-    <div class="end-hint" id="endHint">🎉 已经到底啦</div>
+    <div class="pager" id="pager"></div>
     <div class="count-hint" id="countHint"></div>
   </div>
-  <div class="sentinel" id="sentinel" style="display:none;"></div>
 </div>
 
 <div class="footer">
@@ -498,9 +538,8 @@ const overlayContainer = document.getElementById('overlayContainer');
 const updatedEl = document.getElementById('updated');
 const listFooter = document.getElementById('listFooter');
 const loadMoreBtn = document.getElementById('loadMoreBtn');
-const endHint = document.getElementById('endHint');
+const pagerEl = document.getElementById('pager');
 const countHint = document.getElementById('countHint');
-const sentinel = document.getElementById('sentinel');
 
 let categories = [];
 let tools = [];
@@ -509,7 +548,6 @@ let activeCategory = 'all';
 let activeToolId = null;
 const PAGE_SIZE = 24;
 let currentPage = 1;
-let observer = null;
 
 function extractDomain(url) {
   try { return new URL(url).hostname.replace('www.', ''); }
@@ -565,63 +603,77 @@ function emptyHtml() {
   return `<div class="empty"><div class="empty-icon">📭</div><div class="empty-text">没有找到匹配的工具</div></div>`;
 }
 
-function renderCardsInto(container, list, withAnim) {
-  const frag = document.createElement('div');
-  frag.innerHTML = list.map(t => renderCard(t, withAnim)).join('');
-  while (frag.firstChild) container.appendChild(frag.firstChild);
+function totalPages() {
+  return Math.max(1, Math.ceil(viewList.length / PAGE_SIZE));
 }
 
-// 初始渲染：只渲染第一页，清空首页 DOM 节点数，加快首屏
+// 初始渲染：只渲染第一页，减少首屏 DOM 节点数，加快首屏
 function renderInitial() {
   currentPage = 1;
+  renderPage();
+}
+
+// 渲染当前页（整页替换，体现「分页」）
+function renderPage() {
   grid.innerHTML = '';
-  unobserveSentinel();
   if (viewList.length === 0) {
     grid.innerHTML = emptyHtml();
     listFooter.style.display = 'none';
-    sentinel.style.display = 'none';
     return;
   }
-  const slice = viewList.slice(0, PAGE_SIZE);
-  renderCardsInto(grid, slice, false);
-  listFooter.style.display = 'flex';
-  updateFooter();
-  observeSentinel();
-}
-
-// 追加下一页（懒加载 / 点击「加载更多」）
-function appendPage() {
-  if (currentPage * PAGE_SIZE >= viewList.length) return;
-  currentPage++;
   const start = (currentPage - 1) * PAGE_SIZE;
   const end = Math.min(currentPage * PAGE_SIZE, viewList.length);
-  renderCardsInto(grid, viewList.slice(start, end), true);
-  updateFooter();
+  grid.innerHTML = viewList.slice(start, end).map(t => renderCard(t, currentPage > 1)).join('');
+  listFooter.style.display = 'flex';
+  updatePager();
 }
 
-function updateFooter() {
-  const shown = Math.min(currentPage * PAGE_SIZE, viewList.length);
-  const total = viewList.length;
-  countHint.textContent = `已显示 ${shown} / ${total} 个工具`;
-  const hasMore = shown < total;
-  loadMoreBtn.style.display = hasMore ? 'inline-flex' : 'none';
-  endHint.style.display = hasMore ? 'none' : 'block';
-  sentinel.style.display = hasMore ? 'block' : 'none';
-  if (hasMore) observeSentinel(); else unobserveSentinel();
+// 跳转到指定页
+function goToPage(n) {
+  const tp = totalPages();
+  if (n < 1 || n > tp || n === currentPage) return;
+  currentPage = n;
+  renderPage();
+  const y = grid.getBoundingClientRect().top + window.scrollY - 80;
+  window.scrollTo({ top: y, behavior: 'smooth' });
 }
 
-// 滚动到接近底部时自动触发下一页（懒加载）
-function observeSentinel() {
-  if (!observer) {
-    observer = new IntersectionObserver(entries => {
-      if (entries[0].isIntersecting) appendPage();
-    }, { rootMargin: '300px 0px' });
+// 计算页码列表（首页/尾页/当前页及相邻页，其余用 …）
+function pageList(cur, tp) {
+  const set = new Set([1, tp, cur, cur - 1, cur + 1]);
+  const arr = [...set].filter(p => p >= 1 && p <= tp).sort((a, b) => a - b);
+  const out = [];
+  let prev = 0;
+  arr.forEach(p => {
+    if (p - prev > 1) out.push('...');
+    out.push(p);
+    prev = p;
+  });
+  return out;
+}
+
+function updatePager() {
+  const tp = totalPages();
+  countHint.textContent = `第 ${currentPage} / ${tp} 页 · 共 ${viewList.length} 个工具`;
+  if (tp <= 1) {
+    pagerEl.innerHTML = '';
+    loadMoreBtn.style.display = 'none';
+    return;
   }
-  observer.observe(sentinel);
-}
-
-function unobserveSentinel() {
-  if (observer) observer.unobserve(sentinel);
+  loadMoreBtn.style.display = 'inline-flex';
+  let html = `<button class="page-btn" data-page="${currentPage - 1}" ${currentPage === 1 ? 'disabled' : ''}>‹ 上一页</button>`;
+  pageList(currentPage, tp).forEach(p => {
+    if (p === '...') html += `<span class="page-ellipsis">…</span>`;
+    else html += `<button class="page-btn ${p === currentPage ? 'active' : ''}" data-page="${p}">${p}</button>`;
+  });
+  html += `<button class="page-btn" data-page="${currentPage + 1}" ${currentPage === tp ? 'disabled' : ''}>下一页 ›</button>`;
+  pagerEl.innerHTML = html;
+  pagerEl.querySelectorAll('.page-btn').forEach(b => {
+    b.addEventListener('click', () => {
+      const p = parseInt(b.dataset.page, 10);
+      if (!isNaN(p)) goToPage(p);
+    });
+  });
 }
 
 function renderFilterBar() {
@@ -740,7 +792,7 @@ document.addEventListener('keydown', e => {
 });
 
 searchInput.addEventListener('input', filterAndRender);
-loadMoreBtn.addEventListener('click', appendPage);
+loadMoreBtn.addEventListener('click', () => goToPage(currentPage + 1));
 
 // Init
 (async function init() {
