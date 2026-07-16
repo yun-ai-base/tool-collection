@@ -393,6 +393,51 @@ body {
 .footer a { color: var(--primary); text-decoration: none; }
 .footer a:hover { text-decoration: underline; }
 
+/* Pagination / Lazy load */
+.list-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 28px 0 8px;
+}
+.load-more-btn {
+  padding: 10px 30px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: var(--radius-input);
+  background: white;
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.load-more-btn:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+.load-more-btn:active { transform: scale(.98); }
+.load-more-btn:disabled { opacity: .5; cursor: default; }
+.end-hint {
+  font-size: 12px;
+  color: var(--text-placeholder);
+  letter-spacing: .03em;
+}
+.count-hint {
+  font-size: 11px;
+  color: var(--text-placeholder);
+  letter-spacing: .02em;
+}
+.sentinel { width: 100%; height: 1px; }
+.card--enter { animation: cardIn .35s ease both; }
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 /* Responsive */
 @media (max-width: 640px) {
   .header { padding: 36px 20px 20px; }
@@ -431,6 +476,12 @@ body {
       <div class="loading-text">加载工具列表中...</div>
     </div>
   </div>
+  <div class="list-footer" id="listFooter" style="display:none;">
+    <button class="load-more-btn" id="loadMoreBtn">加载更多 ↓</button>
+    <div class="end-hint" id="endHint">🎉 已经到底啦</div>
+    <div class="count-hint" id="countHint"></div>
+  </div>
+  <div class="sentinel" id="sentinel" style="display:none;"></div>
 </div>
 
 <div class="footer">
@@ -445,11 +496,20 @@ const filterBar = document.getElementById('filterBar');
 const searchInput = document.getElementById('search');
 const overlayContainer = document.getElementById('overlayContainer');
 const updatedEl = document.getElementById('updated');
+const listFooter = document.getElementById('listFooter');
+const loadMoreBtn = document.getElementById('loadMoreBtn');
+const endHint = document.getElementById('endHint');
+const countHint = document.getElementById('countHint');
+const sentinel = document.getElementById('sentinel');
 
 let categories = [];
 let tools = [];
+let viewList = [];
 let activeCategory = 'all';
 let activeToolId = null;
+const PAGE_SIZE = 24;
+let currentPage = 1;
+let observer = null;
 
 function extractDomain(url) {
   try { return new URL(url).hostname.replace('www.', ''); }
@@ -475,7 +535,7 @@ function renderTag(text, bg, color, cls) {
   return `<span class="tag ${cls || ''}" style="background:${bg};color:${color};">${text}</span>`;
 }
 
-function renderCard(tool) {
+function renderCard(tool, withAnim) {
   const color = getCategoryColor(tool.category);
   const domain = extractDomain(tool.url);
   const catTag = renderTag(
@@ -487,7 +547,7 @@ function renderCard(tool) {
   ).join('');
 
   return `
-    <div class="card" data-id="${tool.id}" onclick="openModal('${tool.id}')">
+    <div class="card${withAnim ? ' card--enter' : ''}" data-id="${tool.id}" onclick="openModal('${tool.id}')">
       <div class="card-header">
         <div class="card-icon" style="background:${hexToRgba(color,.12)};color:${color};">${tool.icon}</div>
         <div class="card-title-area">
@@ -501,12 +561,67 @@ function renderCard(tool) {
   `;
 }
 
-function renderGrid(filtered) {
-  if (filtered.length === 0) {
-    grid.innerHTML = `<div class="empty"><div class="empty-icon">📭</div><div class="empty-text">没有找到匹配的工具</div></div>`;
+function emptyHtml() {
+  return `<div class="empty"><div class="empty-icon">📭</div><div class="empty-text">没有找到匹配的工具</div></div>`;
+}
+
+function renderCardsInto(container, list, withAnim) {
+  const frag = document.createElement('div');
+  frag.innerHTML = list.map(t => renderCard(t, withAnim)).join('');
+  while (frag.firstChild) container.appendChild(frag.firstChild);
+}
+
+// 初始渲染：只渲染第一页，清空首页 DOM 节点数，加快首屏
+function renderInitial() {
+  currentPage = 1;
+  grid.innerHTML = '';
+  unobserveSentinel();
+  if (viewList.length === 0) {
+    grid.innerHTML = emptyHtml();
+    listFooter.style.display = 'none';
+    sentinel.style.display = 'none';
     return;
   }
-  grid.innerHTML = filtered.map(renderCard).join('');
+  const slice = viewList.slice(0, PAGE_SIZE);
+  renderCardsInto(grid, slice, false);
+  listFooter.style.display = 'flex';
+  updateFooter();
+  observeSentinel();
+}
+
+// 追加下一页（懒加载 / 点击「加载更多」）
+function appendPage() {
+  if (currentPage * PAGE_SIZE >= viewList.length) return;
+  currentPage++;
+  const start = (currentPage - 1) * PAGE_SIZE;
+  const end = Math.min(currentPage * PAGE_SIZE, viewList.length);
+  renderCardsInto(grid, viewList.slice(start, end), true);
+  updateFooter();
+}
+
+function updateFooter() {
+  const shown = Math.min(currentPage * PAGE_SIZE, viewList.length);
+  const total = viewList.length;
+  countHint.textContent = `已显示 ${shown} / ${total} 个工具`;
+  const hasMore = shown < total;
+  loadMoreBtn.style.display = hasMore ? 'inline-flex' : 'none';
+  endHint.style.display = hasMore ? 'none' : 'block';
+  sentinel.style.display = hasMore ? 'block' : 'none';
+  if (hasMore) observeSentinel(); else unobserveSentinel();
+}
+
+// 滚动到接近底部时自动触发下一页（懒加载）
+function observeSentinel() {
+  if (!observer) {
+    observer = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) appendPage();
+    }, { rootMargin: '300px 0px' });
+  }
+  observer.observe(sentinel);
+}
+
+function unobserveSentinel() {
+  if (observer) observer.unobserve(sentinel);
 }
 
 function renderFilterBar() {
@@ -529,18 +644,18 @@ function renderFilterBar() {
 
 function filterAndRender() {
   const query = searchInput.value.toLowerCase().trim();
-  let filtered = tools;
+  viewList = tools;
   if (activeCategory !== 'all') {
-    filtered = filtered.filter(t => t.category === activeCategory);
+    viewList = viewList.filter(t => t.category === activeCategory);
   }
   if (query) {
-    filtered = filtered.filter(t =>
+    viewList = viewList.filter(t =>
       t.name.toLowerCase().includes(query) ||
       t.description.toLowerCase().includes(query) ||
       t.tags.some(tag => tag.toLowerCase().includes(query))
     );
   }
-  renderGrid(filtered);
+  renderInitial();
 }
 
 function openModal(id) {
@@ -625,6 +740,7 @@ document.addEventListener('keydown', e => {
 });
 
 searchInput.addEventListener('input', filterAndRender);
+loadMoreBtn.addEventListener('click', appendPage);
 
 // Init
 (async function init() {
