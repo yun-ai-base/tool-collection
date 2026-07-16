@@ -36,6 +36,48 @@
       "name": "变现赚钱",
       "icon": "💰",
       "color": "#10b981"
+    },
+    {
+      "id": "dev",
+      "name": "开发工具",
+      "icon": "💻",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "image",
+      "name": "图片设计",
+      "icon": "🎨",
+      "color": "#ec4899"
+    },
+    {
+      "id": "media",
+      "name": "音视频工具",
+      "icon": "🎬",
+      "color": "#f97316"
+    },
+    {
+      "id": "pdf",
+      "name": "PDF 工具",
+      "icon": "📄",
+      "color": "#14b8a6"
+    },
+    {
+      "id": "web",
+      "name": "网页工具",
+      "icon": "🌍",
+      "color": "#8b5cf6"
+    },
+    {
+      "id": "productivity",
+      "name": "效率工具",
+      "icon": "⚡",
+      "color": "#84cc16"
+    },
+    {
+      "id": "misc",
+      "name": "其他工具",
+      "icon": "🧰",
+      "color": "#64748b"
     }
   ],
   "tools": [
@@ -526,6 +568,357 @@
         {"name": "v2ray-core", "url": "https://github.com/v2fly/v2ray-core", "desc": "V2Ray 核心代理工具"},
         {"name": "Xray-core", "url": "https://github.com/XTLS/Xray-core", "desc": "V2Ray 改进分支"}
       ]
+    },
+    {
+      "id": "twelveft",
+      "name": "12ft.io",
+      "url": "https://twelveft.io",
+      "icon": "🔓",
+      "description": "绕过各种付费墙（paywall），免费阅读付费文章。",
+      "category": "web",
+      "tags": ["付费墙", "阅读", "新闻"],
+      "review": "直接把付费文章链接贴进去，自动绕开 paywall 显示全文。对经常读到被截断的文章非常实用。"
+    },
+    {
+      "id": "archiveph",
+      "name": "Archive.ph",
+      "url": "https://archive.ph",
+      "icon": "📦",
+      "description": "永久保存任何网页，生成不会消失的快照。",
+      "category": "web",
+      "tags": ["存档", "快照", "网页保存"],
+      "review": "看到的网页链接随时可能失效，archive.ph 可以生成永久快照。写文章引用、存证据、收藏好内容必备。"
+    },
+    {
+      "id": "radiogarden",
+      "name": "Radio Garden",
+      "url": "https://radio.garden",
+      "icon": "🌏",
+      "description": "在地球仪上拖动收听全球各地广播电台。",
+      "category": "media",
+      "tags": ["广播", "音乐", "全球"],
+      "review": "3D 地球仪界面，拖到哪个城市就听哪个地方的电台。氛围感极强，适合探索世界各地的音乐和新闻广播。"
+    },
+    {
+      "id": "futureme",
+      "name": "FutureMe",
+      "url": "https://futureme.org",
+      "icon": "📬",
+      "description": "给未来的自己写邮件，在指定日期发送。",
+      "category": "misc",
+      "tags": ["邮件", "时间胶囊", "日记"],
+      "review": "写给一年后、五年后甚至十年后的自己。收到过去的自己写的信是一种很特别的体验，适合做年度反思和目标记录。"
+    },
+    {
+      "id": "tempmail",
+      "name": "Temp-Mail",
+      "url": "https://temp-mail.org",
+      "icon": "📧",
+      "description": "一次性临时邮箱，用完即弃，保护隐私。",
+      "category": "web",
+      "tags": ["邮箱", "隐私", "临时"],
+      "review": "注册不需要长期使用的网站时用临时邮箱，避免垃圾邮件和隐私泄露。即开即用，不需要注册。"
+    },
+    {
+      "id": "alternativeto",
+      "name": "AlternativeTo",
+      "url": "https://alternativeto.net",
+      "icon": "🔄",
+      "description": "搜索付费应用的免费开源替代品。",
+      "category": "dev",
+      "tags": ["软件替代", "开源", "免费"],
+      "review": "输入一个付费软件名，它告诉你有哪些免费/开源的替代方案。寻找省钱的工具时的首选。"
+    },
+    {
+      "id": "builtwith",
+      "name": "BuiltWith",
+      "url": "https://builtwith.com",
+      "icon": "🔍",
+      "description": "查看任何网站使用了哪些技术栈。",
+      "category": "dev",
+      "tags": ["网站分析", "技术栈", "工具"],
+      "review": "输入一个网站的 URL，就能看到它用了什么服务器、框架、CDN、分析工具、广告平台。研究竞品和学习技术选型非常有用。"
+    },
+    {
+      "id": "cleanuppictures",
+      "name": "Cleanup.pictures",
+      "url": "https://cleanup.pictures",
+      "icon": "🧹",
+      "description": "从图片中移除不需要的对象、人物、文字或水印。",
+      "category": "image",
+      "tags": ["去水印", "修图", "AI"],
+      "review": "涂抹掉想移除的部分，AI 自动填充背景。比 PS 快很多，适合快速修图。免费版够日常使用。"
+    },
+    {
+      "id": "tinywow",
+      "name": "TinyWow",
+      "url": "https://tinywow.com",
+      "icon": "✨",
+      "description": "免费在线 PDF/图片/视频处理工具合集，无水印无广告。",
+      "category": "image",
+      "tags": ["PDF", "图片处理", "免费工具"],
+      "review": "集合了 PDF 编辑、格式转换、图片压缩、裁剪、去背景等各种小工具。免费无水印，省掉安装多个软件的麻烦。"
+    },
+    {
+      "id": "photopea",
+      "name": "Photopea",
+      "url": "https://photopea.com",
+      "icon": "🎨",
+      "description": "浏览器里运行的 Photoshop 替代品，支持 PSD 文件。",
+      "category": "image",
+      "tags": ["PS", "设计", "在线编辑"],
+      "review": "浏览器版的 Photoshop，界面和操作逻辑高度相似。支持直接打开和编辑 .psd 文件，免费不用注册。临时需要修图时非常方便。"
+    },
+    {
+      "id": "pdf24",
+      "name": "PDF24",
+      "url": "https://pdf24.org",
+      "icon": "📄",
+      "description": "免费 PDF 工具箱，合并/拆分/压缩/转换/编辑一应俱全。",
+      "category": "pdf",
+      "tags": ["PDF", "工具", "免费"],
+      "review": "PDF 编辑的全能工具箱，合并、拆分、压缩、格式转换、加页码、加密码等几十种功能。免费版没有任何功能限制。"
+    },
+    {
+      "id": "excalidraw",
+      "name": "Excalidraw",
+      "url": "https://excalidraw.com",
+      "icon": "✏️",
+      "description": "绘制手绘风格流程图、架构图和示意图。",
+      "category": "dev",
+      "tags": ["绘图", "流程图", "白板"],
+      "review": "手绘风格的流程图工具，画出来的图自然不呆板。支持实时协作，非常适合画架构图、线框图、思维导图。"
+    },
+    {
+      "id": "tldraw",
+      "name": "tldraw",
+      "url": "https://tldraw.com",
+      "icon": "🖍️",
+      "description": "无限画布白板，画图/标注/协作。",
+      "category": "dev",
+      "tags": ["白板", "绘图", "协作"],
+      "review": "比 Excalidraw 更自由的白板工具，没有画布边界。适合开会时画示意图、头脑风暴框架，可以多人实时协作。"
+    },
+    {
+      "id": "dictationio",
+      "name": "Dictation.io",
+      "url": "https://dictation.io",
+      "icon": "🎙️",
+      "description": "在线语音转文字，支持中文英文等多语言。",
+      "category": "productivity",
+      "tags": ["语音输入", "转录", "效率"],
+      "review": "浏览器里直接语音转文字，支持中文和英文。写东西累的时候直接说，自动转成文字，准确率很高。"
+    },
+    {
+      "id": "otter",
+      "name": "Otter.ai",
+      "url": "https://otter.ai",
+      "icon": "📝",
+      "description": "自动转录会议内容，生成笔记和摘要。",
+      "category": "productivity",
+      "tags": ["会议转录", "AI", "笔记"],
+      "review": "会议录音自动转文字并生成摘要。支持 Zoom 集成，每月免费 300 分钟。开会不怕漏记。"
+    },
+    {
+      "id": "descript",
+      "name": "Descript",
+      "url": "https://descript.com",
+      "icon": "✂️",
+      "description": "像编辑文字一样编辑音频和视频，AI 驱动。",
+      "category": "media",
+      "tags": ["音频编辑", "视频编辑", "AI"],
+      "review": "革命性的音视频编辑方式：删除/修改文字对应的音视频片段也会自动被删除/修改。做播客和短视频的利器。"
+    },
+    {
+      "id": "loom",
+      "name": "Loom",
+      "url": "https://loom.com",
+      "icon": "📹",
+      "description": "快速录制屏幕+摄像头视频，分享链接即可观看。",
+      "category": "productivity",
+      "tags": ["录屏", "视频", "沟通"],
+      "review": "录屏+人脸同时出镜，生成链接发给对方就能看，对方不需要安装任何软件。沟通问题比写文字效率高得多。"
+    },
+    {
+      "id": "zapier",
+      "name": "Zapier",
+      "url": "https://zapier.com",
+      "icon": "⚡",
+      "description": "连接 5000+ 应用自动化工作流，无需编程。",
+      "category": "productivity",
+      "tags": ["自动化", "工作流", "集成"],
+      "review": "把日常重复操作串成自动化流程，比如「收到邮件附件 → 自动存到网盘 → 通知团队」。免费版每月 100 个任务。"
+    },
+    {
+      "id": "n8n",
+      "name": "n8n.io",
+      "url": "https://n8n.io",
+      "icon": "🔗",
+      "description": "开源自建工作流自动化平台，可本地部署。",
+      "category": "dev",
+      "tags": ["自动化", "开源", "工作流"],
+      "review": "Zapier 的开源替代品，免费自建。功能更强大，但需要自己部署维护。适合有技术能力的用户。"
+    },
+    {
+      "id": "removephotos",
+      "name": "Remove.photos",
+      "url": "https://remove.photos",
+      "icon": "✂️",
+      "description": "一键移除图片背景，免费在线使用。",
+      "category": "image",
+      "tags": ["去背景", "图片", "AI"],
+      "review": "上传图片自动去掉背景，边缘处理得比很多付费工具还干净。免费无限制。适合制作产品图、头像。"
+    },
+    {
+      "id": "letsenhance",
+      "name": "Let's Enhance",
+      "url": "https://letsenhance.io",
+      "icon": "🔍",
+      "description": "AI 放大图片分辨率，提升画质不失真。",
+      "category": "image",
+      "tags": ["图片放大", "AI", "画质"],
+      "review": "小图放大后依然清晰，AI 自动补全细节。适合老旧照片修复、产品图高质量输出。免费版有额度限制。"
+    },
+    {
+      "id": "pixabay",
+      "name": "Pixabay",
+      "url": "https://pixabay.com",
+      "icon": "🖼️",
+      "description": "免费可商用图片/视频/音乐素材库。",
+      "category": "image",
+      "tags": ["免费素材", "图片", "视频", "音乐"],
+      "review": "300 万+ 免费可商用素材，图片、视频、音乐、音效都有。不需要署名，做自媒体和设计项目必备资源站。"
+    },
+    {
+      "id": "mixkit",
+      "name": "Mixkit",
+      "url": "https://mixkit.co",
+      "icon": "🎵",
+      "description": "免费高质量视频素材、音乐、音效和模板。",
+      "category": "media",
+      "tags": ["视频素材", "音乐", "免费"],
+      "review": "Pixabay 的姊妹站，侧重视频素材和背景音乐。质量比很多收费素材库还高。做视频编辑时找素材的首选。"
+    },
+    {
+      "id": "untools",
+      "name": "Untools",
+      "url": "https://untools.co",
+      "icon": "🧠",
+      "description": "决策思维工具集合，帮助更清晰地思考和决策。",
+      "category": "productivity",
+      "tags": ["思维工具", "决策", "方法论"],
+      "review": "整理了各种思维框架和决策工具：第一性原理、思维模型、决策矩阵、系统思考等。每个工具都有简洁的解释和可视化的用法。"
+    },
+    {
+      "id": "roadmapsh",
+      "name": "roadmap.sh",
+      "url": "https://roadmap.sh",
+      "icon": "🗺️",
+      "description": "开发者学习路线图，从入门到进阶的完整路径。",
+      "category": "dev",
+      "tags": ["学习路线", "编程", "教程"],
+      "review": "前端、后端、DevOps、AI、React、Python 等各方向的学习路线图。标注了每个阶段应该学什么、做什么项目，按图索骥即可。"
+    },
+    {
+      "id": "learnxinyminutes",
+      "name": "Learn X in Y Minutes",
+      "url": "https://learnxinyminutes.com",
+      "icon": "⏱️",
+      "description": "几分钟快速了解一门编程语言的语法和特性。",
+      "category": "dev",
+      "tags": ["编程", "速学", "参考"],
+      "review": "每种语言一页代码概览，注释写明了所有的核心语法。适合快速入门一门语言、或者复习忘了的语法。"
+    },
+    {
+      "id": "devdocs",
+      "name": "DevDocs",
+      "url": "https://devdocs.io",
+      "icon": "📖",
+      "description": "一站式开发者文档查询，支持离线。",
+      "category": "dev",
+      "tags": ["文档", "API", "开发"],
+      "review": "把各种语言的官方文档聚合在一个界面里，支持离线浏览、快速搜索。写代码时查文档的效率工具。"
+    },
+    {
+      "id": "jsoncrack",
+      "name": "JSON Crack",
+      "url": "https://jsoncrack.com",
+      "icon": "🔬",
+      "description": "JSON/JSONL 文件可视化，以树状图或流程图展示。",
+      "category": "dev",
+      "tags": ["JSON", "可视化", "调试"],
+      "review": "把复杂的 JSON 数据渲染成树状图，一眼看清层级结构。调试 API 返回数据时特别好用，比肉眼扫代码快得多。"
+    },
+    {
+      "id": "crontabguru",
+      "name": "Crontab Guru",
+      "url": "https://crontab.guru",
+      "icon": "⏰",
+      "description": "Cron 定时任务表达式的解释器和调试工具。",
+      "category": "dev",
+      "tags": ["cron", "定时任务", "工具"],
+      "review": "输入一个 cron 表达式，它告诉你这个表达式代表什么时间。反过来也可以选择时间，让它生成对应的表达式。写定时任务必备。"
+    },
+    {
+      "id": "copychar",
+      "name": "CopyChar",
+      "url": "https://copychar.cc",
+      "icon": "™️",
+      "description": "一键复制特殊符号、emoji 和 Unicode 字符。",
+      "category": "productivity",
+      "tags": ["符号", "特殊字符", "工具"],
+      "review": "需要打特殊符号（™、©、®、→、√ 等）时不用记快捷键，直接点选复制。设计师和文案写手的常用工具。"
+    },
+    {
+      "id": "screenshotguru",
+      "name": "Screenshot Guru",
+      "url": "https://screenshot.guru",
+      "icon": "📸",
+      "description": "给任意网页生成高清全页截图，可选择不同设备尺寸。",
+      "category": "image",
+      "tags": ["截图", "网页", "工具"],
+      "review": "输入 URL 生成网页截图，全页截图、手机尺寸截图都支持。做产品展示和作品集时很实用。"
+    },
+    {
+      "id": "wordcounter",
+      "name": "WordCounter",
+      "url": "https://wordcounter.net",
+      "icon": "📊",
+      "description": "在线字数统计工具，支持中英文和其他多种语言。",
+      "category": "productivity",
+      "tags": ["字数统计", "写作", "工具"],
+      "review": "粘贴文字自动统计字数、字符数、段落数、阅读时间。支持中英文混排，写作时控制篇幅的好帮手。"
+    },
+    {
+      "id": "justtherecipe",
+      "name": "Just the Recipe",
+      "url": "https://justtherecipe.com",
+      "icon": "🍳",
+      "description": "从食谱博客中提取纯食谱，跳过个人故事和广告。",
+      "category": "web",
+      "tags": ["食谱", "提取", "工具"],
+      "review": "很多食谱网站做一道菜要写几千字的前言，这个工具直接提取出配料清单和步骤，省掉滚动阅读的麻烦。"
+    },
+    {
+      "id": "camelcamelcamel",
+      "name": "CamelCamelCamel",
+      "url": "https://camelcamelcamel.com",
+      "icon": "🐪",
+      "description": "查看亚马逊商品历史价格，设置降价提醒。",
+      "category": "productivity",
+      "tags": ["比价", "亚马逊", "购物"],
+      "review": "贴一个亚马逊商品链接，就能看到它的历史价格曲线，知道现在是不是最低价。可以设置降价提醒，降到目标价自动通知。"
+    },
+    {
+      "id": "manualslib",
+      "name": "ManualsLib",
+      "url": "https://manualslib.com",
+      "icon": "📘",
+      "description": "搜索和下载各种产品的手册和说明书。",
+      "category": "web",
+      "tags": ["手册", "说明书", "搜索"],
+      "review": "几乎任何电子产品的说明书都能在这里找到。丢了说明书或者二手产品没说明书的，来这里搜就对了。"
     }
-  ]
+  ],
+  "updated": "2026-07-16"
 }
